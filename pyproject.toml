@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walletscrape"
+version = "0.2.0"
+description = "Scrape balances and token transfers for whale wallets across EVM and Solana"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Alex Chen" }]
+dependencies = [
+    "httpx>=0.25.0",
+    "pydantic>=2.4.0",
+    "click>=8.1.0",
+    "python-dotenv>=1.0.0",
+    "orjson>=3.9.0",
+    "tenacity>=8.2.0",
+    "rich>=13.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "respx>=0.21.0",
+]
+
+[project.scripts]
+walletscrape = "walletscrape.cli:main"
