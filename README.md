@@ -81,3 +81,5 @@ walletscrape sync -c wallets.json --db data/snapshots.db
 ```bash
 pytest
 ```
+
+<!-- last-sync: 2026-09-08 -->
